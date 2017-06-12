@@ -47,7 +47,7 @@
         <script id="cart-template" type="text/x-handlebars-template">
             <ul id="cart-items">
                 {{#each this}}
-                <li>{{name}}: {{price}}</li>
+                <li>{{name}}: {{price}} <button class="btn-danger remove-item">Remove</button></li>
                 {{/each}}
             </ul>
         </script>

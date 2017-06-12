@@ -1,5 +1,6 @@
 // an array with all of our cart items
 var cart = [];
+var id = 0;
 
 var updateCart = function () {
   // TODO: Write this function. In this function we render the page.
@@ -56,5 +57,10 @@ $('.clear-cart').on('click', function () {
   clearCart();
 });
 
+$('.cart-list').on('click','.remove-item', function() {
+  var index = $(this).parent().index();
+  cart.splice(index,1);
+  updateCart();
+});
 // update the cart as soon as the page loads!
 updateCart();
